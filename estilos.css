@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para otros elementos */
+header, nav, main, footer {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: hsl(0, 2%, 54%);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+section {
+    margin: 20px;
+}
+
