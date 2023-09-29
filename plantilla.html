@@ -9,6 +9,8 @@
     <script src="funciones.js"></script>
 </head>
 <body>
+ <!-- Incluye la barra de navegación -->
+ <div id="navbar-container"></div>
     <div class="sidebar">
         <nav>
             <ul>
@@ -40,5 +42,19 @@
     <footer>
         
     </footer>
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+     
+     // Usa la función fetch para cargar el archivo navbar.html
+     fetch('./components/navBaritem.html')
+         .then(response => response.text())
+         .then(html => {
+             // Inserta el contenido HTML en el contenedor
+             navbarContainer.innerHTML = html;
+         })
+         .catch(error => {
+             console.error('Error al cargar la barra de navegación:', error);
+         });
+     </script>
 </body>
 </html>
