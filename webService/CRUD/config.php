@@ -5,7 +5,7 @@ class configDb {
     var $host = 'localhost';
     var $dbname = "minimarket";
     var $user = "root";
-    var $pass = "root";
+    var $pass = "";
 
     
     function getHost() {

@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2023 a las 18:55:42
+-- Servidor: 127.0.0.1:3308
+-- Tiempo de generación: 20-10-2023 a las 03:10:53
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `mini_market`
+-- Base de datos: `minimarket`
 --
 
 -- --------------------------------------------------------
@@ -119,6 +119,34 @@ INSERT INTO `detalle_de_ventas` (`ID_Detalle`, `ID_Venta`, `ID_Producto`, `Canti
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `ejemplo`
+--
+
+CREATE TABLE `ejemplo` (
+  `nombre` varchar(50) NOT NULL,
+  `contra` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `ejemplo`
+--
+
+INSERT INTO `ejemplo` (`nombre`, `contra`) VALUES
+('juan', 'juan123'),
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('gfhf', 'fghfgh'),
+('', ''),
+('dfsdf', 'sdfsdf'),
+('dfsdf', 'dsfsdf');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `empleados`
 --
 
@@ -126,8 +154,8 @@ CREATE TABLE `empleados` (
   `ID_Empleado` int(11) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `Apellido` varchar(50) NOT NULL,
-  `Fecha_Nacimiento` date DEFAULT NULL,
-  `Direccion` varchar(100) DEFAULT NULL,
+  `usuario` varchar(50) DEFAULT NULL,
+  `contra` varchar(50) DEFAULT NULL,
   `Telefono` varchar(15) DEFAULT NULL,
   `Correo_Electronico` varchar(100) DEFAULT NULL,
   `ID_Rol` int(11) DEFAULT NULL,
@@ -138,12 +166,12 @@ CREATE TABLE `empleados` (
 -- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `empleados` (`ID_Empleado`, `Nombre`, `Apellido`, `Fecha_Nacimiento`, `Direccion`, `Telefono`, `Correo_Electronico`, `ID_Rol`, `Salario`) VALUES
-(101, 'Juan', 'Perez', '1990-05-15', 'Calle 123', '555-987-6543', 'juan.perez@example.com', 1, 2500.00),
-(102, 'Maria', 'Lopez', '1994-05-05', 'AV principal', '321-123-4564', 'maria.lopez@example.com', 2, 3500.00),
-(103, 'Carlos', 'Garcia', '1997-04-25', 'Calle 43', '319-123-4567', 'carlos.garcia@example.com', 3, 2000.00),
-(104, 'Laura', 'Martinez', '1992-11-11', 'Carrera 7', '318-456-7890', 'laura.martinez@example.com', 1, 2800.00),
-(105, 'Ana', 'Rodriguez', '1988-08-08', 'Calle 22', '314-789-1234', 'ana.rodriguez@example.com', 2, 3200.00);
+INSERT INTO `empleados` (`ID_Empleado`, `Nombre`, `Apellido`, `usuario`, `contra`, `Telefono`, `Correo_Electronico`, `ID_Rol`, `Salario`) VALUES
+(101, 'Juan', 'Perez', 'juanp', 'ejemplo123', '555-987-6543', 'juan.perez@example.com', 1, 2500.00),
+(102, 'Maria', 'Lopez', 'marial', 'ejemplo123', '321-123-4564', 'maria.lopez@example.com', 2, 3500.00),
+(103, 'Carlos', 'Garcia', 'carlosg', 'ejemplo123', '319-123-4567', 'carlos.garcia@example.com', 3, 2000.00),
+(104, 'Laura', 'Martinez', 'lauram', 'ejemplo123', '318-456-7890', 'laura.martinez@example.com', 1, 2800.00),
+(105, 'Ana', 'Rodriguez', 'anar', 'ejemplo123', '314-789-1234', 'ana.rodriguez@example.com', 2, 3200.00);
 
 -- --------------------------------------------------------
 
