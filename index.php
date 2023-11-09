@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<?php
-	if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
-		$uri = 'https://';
-	} else {
-		$uri = 'http://';
-	}
-	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/dashboard/');
-	exit;
-?>
-Something is wrong with the XAMPP installation :-(
-=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -414,4 +401,4 @@ fetch('./components/navBaritem.html')
 </body>
 
 </html>
->>>>>>> d69284cedb77d34df9e019d79713b1409cacaaa9
+
