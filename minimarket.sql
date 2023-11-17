@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3308
--- Tiempo de generación: 20-10-2023 a las 03:10:53
+-- Tiempo de generación: 17-11-2023 a las 02:29:57
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -85,6 +85,8 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`ID_Cliente`, `Nombre`, `Apellido`, `Correo_Electronico`, `Telefono`, `Direccion`) VALUES
+(56, 'vghb', 'hbbh', 'njnh@gmail.com', 'jninji', 'njinji'),
+(444, 'pirlo', 'rata', 'pirlo@gmail.com', '222222222222', '222'),
 (1013, 'Juan Carlos', 'Lopez', 'juan.carlos@gmail.com', '313578489', 'Carrera 10'),
 (1014, 'Diego Hernandez', 'Martinez', 'DHERNANDEZ@gmail.com', '315784521', 'Calle 5'),
 (1015, 'Alejandro Valderrama', 'Garcia', 'AVALDE@gmail.com', '318794221', 'Avenida 8'),
@@ -132,6 +134,17 @@ CREATE TABLE `ejemplo` (
 --
 
 INSERT INTO `ejemplo` (`nombre`, `contra`) VALUES
+('juan', 'juan123'),
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('gfhf', 'fghfgh'),
+('', ''),
+('dfsdf', 'sdfsdf'),
+('dfsdf', 'dsfsdf'),
 ('juan', 'juan123'),
 ('', ''),
 ('', ''),
@@ -267,7 +280,8 @@ CREATE TABLE `proveedores` (
 INSERT INTO `proveedores` (`ID_Proveedor`, `Nombre_Proveedor`, `Direccion`, `Correo_Electronico`, `Telefono`) VALUES
 (1, 'Distribuidora ABC', 'Carrera 15', 'manuela@gmail.com', '315768123'),
 (2, 'Jorge Olmedo', 'Avenida 6', 'jorge@gmail.com', '317712364'),
-(3, 'Maria Rojas', 'Calle 25', 'maria@gmail.com', '317802313');
+(3, 'Maria Rojas', 'Calle 25', 'maria@gmail.com', '317802313'),
+(444, 'fgdg', 'dfgdgfdfg', 'pirlo@gmail.com', '444');
 
 -- --------------------------------------------------------
 

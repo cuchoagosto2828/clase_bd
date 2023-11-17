@@ -19,7 +19,7 @@ class conexion {
 
         error_reporting(E_ALL);
         ini_set('display_errors', '1');
-        $pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $user, $pass);
+        $pdo = new PDO("mysql:host=$host;port=3308;dbname=$dbname", $user, $pass);
       
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
