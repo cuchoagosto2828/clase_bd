@@ -102,6 +102,10 @@
                 </div>
             </div>
         </section>
+
+        <a href="form_roles.html" class="btn btn-primary mb-3">
+            Añadir Rol
+        </a>
         <!-- Fin de la edición -->
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
@@ -121,7 +125,40 @@
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // La URL del archivo PHP en el servidor que devuelve los datos de los clientes
+            fetch('http://localhost/mini_market/clase_bd/webService/obtener_roles.php')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la respuesta de la red');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const tbody = document.querySelector('.table-responsive table tbody');
+                tbody.innerHTML = ''; // Limpia la tabla antes de añadir los nuevos datos
+        
+                // Asegúrate de que 'data' es un array y no undefined o null
+                if (Array.isArray(data)) {
+                    data.forEach(roles => {
+                        // Actualiza estas líneas para que coincidan con los datos que quieres mostrar
+                        const row = `<tr>
+                                        <td>${roles.ID_Roles}</td>
+                                        <td>${roles.Nombre_ID} 
+                                    </tr>`;
+                        tbody.innerHTML += row;
+                    });
+                } else {
+                    // Si 'data' no es un array, imprime un mensaje de error o maneja la situación
+                    console.error('La respuesta no es un array:', data);
+                }
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos de los clientes:', error);
+            });
+        });
+    </script>
     <script>
         const navbarContainer = document.getElementById('navbar-container');
         // Usa la función fetch para cargar el archivo navbar.html
